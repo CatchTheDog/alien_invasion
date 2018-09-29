@@ -90,7 +90,7 @@ def get_number_aliens_x(ai_settings,alien_width):
 
 
 def create_alien(ai_settings,screen,aliens,alien_number,row_number):
-	"""穿件一个外星人并将其放在当前行"""
+	"""创建一个外星人并将其放在当前行"""
 	alien = Alien(screen,ai_settings)
 	alien_width = alien.rect.width
 	alien.x = alien_width + 2 * alien_width * alien_number
