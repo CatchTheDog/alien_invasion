@@ -1,10 +1,11 @@
 from pygame.sprite import Group
+
+import game_functions as gf
+from button import Button
+from game_stats import GameStats
+from scoreboard import Scoreboard
 from settings import Settings
 from ship import Ship
-import game_functions as gf
-from game_stats import GameStats
-from button import Button
-from scoreboard import Scoreboard
 
 
 def run_game():
@@ -30,8 +31,8 @@ def run_game():
 			ship.update()
 			gf.update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets)
 			gf.update_aliens(ai_settings, stats, sb, screen, ship, aliens, bullets)
-			
+		
 		gf.update_screen(ai_settings, screen, ship, stats, sb, aliens, bullets, play_button)
-		
-		
+
+
 run_game()
